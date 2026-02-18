@@ -1,306 +1,213 @@
-# iData AI创作平台
+# iData AI Platform 创作平台
 
-> 基于Vue 3 + Spring Boot 3.2 + MyBatis Plus构建的AI创作平台
-
-## 📋 项目简介
-
-iData AI创作平台是一个企业级AI内容创作系统,提供多种AI应用模板,支持文本、图片、视频等多种内容生成。
-
-**主要功能:**
-- 🎨 AI应用中心 - 多种预设AI应用模板
-- 📝 作品管理 - 用户创作内容管理
-- 🧠 思维分析 - 智能写作风格分析
-- 📚 精华内容 - 优质内容展示
-- 💎 会员积分 - VIP会员体系和积分系统
-- 🎁 营销活动 - 邀请奖励、热点趋势
-
-## 🏗️ 技术架构
-
-### 后端技术栈
-- **Java 17** - 编程语言
-- **Spring Boot 3.2.2** - 应用框架
-- **Spring Security 6.x** - 安全框架
-- **MyBatis Plus 3.5.5** - ORM框架
-- **MySQL 8.0** - 主数据库
-- **Redis 7.x** - 缓存
-- **RabbitMQ 3.12** - 消息队列
-- **JWT** - Token认证
-- **Docker** - 容器化部署
-
-### 前端技术栈
-- **Vue 3.4** - 前端框架
-- **TypeScript 5.x** - 类型系统
-- **Vite 5.x** - 构建工具
-- **Pinia 2.x** - 状态管理
-- **Element Plus 2.5** - UI组件库
-- **Vue Router 4.x** - 路由管理
-- **Axios** - HTTP客户端
-
-## 📁 项目结构
-
-```
-idata-ai-platform/
-├── 00-需求与架构/          # 需求文档和架构设计
-├── backend/                 # 后端Java工程
-│   ├── idata-common/        # 公共模块
-│   ├── idata-gateway/       # 网关服务 (待开发)
-│   ├── idata-auth/          # 认证服务 ✅
-│   ├── idata-system/        # 系统管理服务 (待开发)
-│   ├── idata-app/           # 应用服务 (待开发)
-│   ├── idata-content/       # 内容服务 (待开发)
-│   ├── idata-payment/       # 支付服务 (待开发)
-│   ├── idata-ai/            # AI服务 (待开发)
-│   └── idata-marketing/     # 营销服务 (待开发)
-├── frontend/                # 前端Vue3工程 ✅
-├── database/                # 数据库脚本 ✅
-├── deployment/              # 部署配置 (待添加)
-└── docs/                    # 文档 ✅
-```
-
-## 🚀 快速开始
-
-### 环境要求
-
-- JDK 17+
-- Node.js 18+
-- Maven 3.8+
-- MySQL 8.0+
-- Redis 7.x
-- RabbitMQ 3.12+
-
-### 数据库初始化
-
-```bash
-# 1. 创建数据库并导入初始化脚本
-mysql -u root -p < database/schema/init.sql
-```
-
-### 后端启动
-
-```bash
-# 1. 进入后端目录
-cd backend
-
-# 2. 编译项目
-mvn clean install -DskipTests
-
-# 3. 修改配置文件
-# 编辑 idata-auth/src/main/resources/application.yml
-# 修改数据库、Redis、RabbitMQ连接信息
-
-# 4. 启动认证服务
-cd idata-auth
-mvn spring-boot:run
-```
-
-### 前端启动
-
-```bash
-# 1. 进入前端目录
-cd frontend
-
-# 2. 安装依赖
-npm install
-
-# 3. 启动开发服务器
-npm run dev
-
-# 访问 http://localhost:3000
-```
-
-## 📝 开发进度
-
-### ✅ 已完成
-
-1. **需求与架构设计**
-   - ✅ 系统需求说明书
-   - ✅ 技术架构设计
-   - ✅ 数据库设计
-   - ✅ 项目目录结构
-
-2. **后端开发**
-   - ✅ 公共模块(idata-common)
-     - 统一响应结果封装
-     - 异常处理
-     - JWT工具类
-     - Redis服务
-     - RabbitMQ配置
-   - ✅ 认证服务(idata-auth) 基础框架
-     - 登录/注册接口定义
-     - DTO/VO定义
-   - ⚠️ 其他服务模块(需继续开发)
-
-3. **前端开发**
-   - ✅ 项目基础架构
-   - ✅ 路由配置
-   - ✅ 状态管理(Pinia)
-   - ✅ API封装
-   - ⚠️ 页面组件(需继续开发)
-
-4. **数据库**
-   - ✅ 核心表结构设计
-   - ✅ 初始数据脚本
-
-5. **部署文档**
-   - ✅ 完整部署指南
-
-### 🔨 待开发
-
-1. **后端服务**
-   - ⏳ 认证服务 - 完成Service实现、Mapper实现
-   - ⏳ 系统管理服务 - 用户管理、角色管理、配置管理
-   - ⏳ 应用服务 - 应用模板、实例创建
-   - ⏳ 内容服务 - 文章管理、思维分析
-   - ⏳ 支付服务 - 订单、积分、会员
-   - ⏳ AI服务 - AI模型调用、异步处理
-   - ⏳ 营销服务 - 活动、邀请、热点
-   - ⏳ 网关服务 - 统一入口、路由转发
-
-2. **前端页面**
-   - ⏳ 登录/注册页面
-   - ⏳ 首页
-   - ⏳ 应用中心
-   - ⏳ 作品管理
-   - ⏳ 思维页面
-   - ⏳ 文章列表
-   - ⏳ 用户中心
-   - ⏳ 会员中心
-
-3. **完整SQL脚本**
-   - ⏳ 所有表的DDL
-   - ⏳ 示例数据
-
-4. **部署配置**
-   - ⏳ Docker Compose配置
-   - ⏳ Nginx配置文件
-   - ⏳ 启动脚本
-
-## 📖 开发指南
-
-### 继续开发后端服务
-
-参考 `idata-auth` 模块的结构,为每个服务模块创建:
-
-```
-服务模块/
-├── controller/        # 控制器
-├── service/          # 服务接口
-│   └── impl/         # 服务实现
-├── mapper/           # Mapper接口
-├── domain/
-│   ├── entity/       # 实体类
-│   ├── dto/          # 数据传输对象
-│   └── vo/           # 视图对象
-└── config/           # 配置类
-```
-
-**实体类示例:**
-```java
-@Data
-@TableName("t_xxx")
-public class XxxEntity extends BaseEntity {
-    // 字段定义
-}
-```
-
-**Mapper示例:**
-```java
-@Mapper
-public interface XxxMapper extends BaseMapper<XxxEntity> {
-}
-```
-
-**Service示例:**
-```java
-@Service
-public class XxxServiceImpl implements IXxxService {
-    @Autowired
-    private XxxMapper xxxMapper;
-    
-    @Autowired
-    private RedisService redisService;
-}
-```
-
-### 继续开发前端页面
-
-参考 `frontend/src` 的结构,创建页面组件:
-
-```vue
-<template>
-  <div class="page-container">
-    <!-- 页面内容 -->
-  </div>
-</template>
-
-<script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { ElMessage } from 'element-plus'
-
-// 组件逻辑
-</script>
-
-<style scoped lang="scss">
-.page-container {
-  // 样式
-}
-</style>
-```
-
-## 🔧 配置说明
-
-### 后端配置
-
-修改 `backend/[service]/src/main/resources/application.yml`:
-
-```yaml
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/idata_ai
-    username: root
-    password: your-password
-  
-  redis:
-    host: localhost
-    port: 6379
-```
-
-### 前端配置
-
-修改 `frontend/.env.development`:
-
-```env
-VITE_API_BASE_URL=http://localhost:8080/api
-```
-
-## 📚 文档
-
-详细文档请查看:
-- [系统需求说明书](00-需求与架构/01-系统需求说明书.md)
-- [技术架构设计](00-需求与架构/02-技术架构设计.md)
-- [数据库设计](00-需求与架构/03-数据库设计.md)
-- [项目目录结构](00-需求与架构/04-项目目录结构.md)
-- [部署文档](docs/deployment/部署文档.md)
-
-## 🤝 贡献指南
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 详见 LICENSE 文件
-
-## 📧 联系方式
-
-- **项目维护**: iDataAI团队
-- **技术支持**: support@idataai.com
-- **问题反馈**: [GitHub Issues](https://github.com/idataai/idata-ai-platform/issues)
+> 企业级AI内容创作系统 | Java 17 + Spring Boot 3.2 + Vue 3.4
 
 ---
 
-**版本**: v1.0.0  
-**更新时间**: 2026-02-15
+## 🎯 快速导航
+
+### 🚀 我是新手，想快速开始
+**→ [QUICK_START.md](QUICK_START.md)** (5分钟内启动系统)
+
+### 📖 我想部署到生产环境
+**→ [部署指南](docs/deployment/README.md)** 
+- 推荐: [Linux本地部署](docs/deployment/Linux本地部署指南.md) (20分钟)
+- 参考: [Docker部署](docs/deployment/部署文档.md)
+
+### 💻 我想开发新功能
+**→ [开发指南](docs/development/后续开发指南.md)** + [系统架构](docs/architecture/)
+
+### 📚 我想了解项目详情
+**→ [项目总览](docs/PROJECT_OVERVIEW.md)** | [完整文档中心](docs/README.md)
+
+### 🔍 我需要查找特定文档
+**→ [文档导览](docs/navigation/文档导览图.md)** | [可视化图表](docs/navigation/文档导览图-可视化.md)
+
+---
+
+## 📚 文档中心
+
+**所有文档已整理到 `docs/` 目录，按功能分类：**
+
+```
+docs/
+├─ README.md              📖 文档中心首页(从这里开始!)
+├─ PROJECT_OVERVIEW.md    📌 项目总览
+├─ guides/                ⚡ 快速指南
+├─ deployment/            🚀 部署文档
+├─ development/           💻 开发指南
+├─ architecture/          🏗️ 架构设计
+└─ navigation/            📍 文档导览
+```
+
+**→ [进入文档中心](docs/README.md)**
+
+---
+
+## 🏗️ 项目特点
+
+### 微服务架构
+- ✅ 6个独立微服务 (认证、系统、应用、内容、支付、营销)
+- ✅ 异步消息处理 (RabbitMQ)
+- ✅ 缓存加速 (Redis)
+- ✅ 完整的API体系
+
+### 技术栈
+- **后端**: Java 17 + Spring Boot 3.2.2 + MyBatis Plus
+- **前端**: Vue 3.4 + TypeScript + Vite 5
+- **数据**: MySQL 8.0 + Redis 7.x
+- **消息**: RabbitMQ 3.12
+- **部署**: Nginx + Systemd (非Docker方案推荐)
+
+### 开发特性
+- 📊 完整的数据库设计 (17张表)
+- 🔐 JWT认证 + Redis缓存
+- 🎨 Element Plus UI组件库
+- 🔄 自动化部署脚本
+- ✅ 6个主要服务已完成
+- 📝 详细的架构和开发文档
+
+---
+
+## 🚀 零依赖快速开始 (5分钟)
+
+```bash
+# 1. 快速部署
+bash scripts/build/build-all.sh   # 编译
+bash scripts/deploy/start-services.sh all  # 启动
+
+# 2. 访问系统
+http://localhost   # 前端
+```
+
+→ **[详细快速开始指南](QUICK_START.md)**
+
+---
+
+## 📦 项目结构
+
+```
+idata-ai-platform/
+├── backend/              # Java后端代码 (6个微服务)
+├── frontend/             # Vue 3.4前端代码
+├── database/             # MySQL数据库脚本
+├── scripts/              # 部署和构建脚本
+├── config/               # 配置文件模板
+├── docs/                 # 📖 完整文档 (按功能分类)
+├── QUICK_START.md        # ⚡ 5分钟快速开始
+└── README.md            # 本文件
+```
+
+---
+
+## 💡 推荐流程
+
+### 👨‍💻 对于新手
+```
+QUICK_START.md (5分钟)
+    ↓
+docs/PROJECT_OVERVIEW.md (5分钟)
+    ↓
+docs/deployment/Linux本地部署指南.md (20分钟)
+    ↓
+✅ 系统启动!
+```
+
+### 🛠️ 对于运维
+```
+docs/deployment/Linux本地部署指南.md (20分钟)
+    ↓
+docs/deployment/配置参考手册.md (10分钟)
+    ↓
+docs/guides/DEPLOYMENT_CHECKLIST.md (10分钟)
+    ↓
+✅ 部署完成!
+```
+
+### 👨‍💼 对于开发
+```
+docs/PROJECT_OVERVIEW.md (5分钟)
+    ↓
+docs/architecture/02-技术架构设计.md (20分钟)
+    ↓
+docs/development/后续开发指南.md (20分钟)
+    ↓
+✅ 开发准备完成!
+```
+
+---
+
+## 🔗 关键文档链接
+
+### ⚡ 快速开始
+- [QUICK_START.md](QUICK_START.md) - 5分钟快速部署
+- [项目总览](docs/PROJECT_OVERVIEW.md) - 了解项目
+
+### 🚀 部署文档
+- [部署导航](docs/deployment/README.md) - 选择部署方案
+- [Linux本地部署](docs/deployment/Linux本地部署指南.md) ⭐ 推荐
+- [配置参考](docs/deployment/配置参考手册.md) - 参数详解
+- [部署检查清单](docs/guides/DEPLOYMENT_CHECKLIST.md) - 验收检查
+
+### 💻 开发文档
+- [开发指南](docs/development/后续开发指南.md) - 功能开发计划
+- [技术架构](docs/architecture/02-技术架构设计.md) - 系统设计
+- [数据库设计](docs/architecture/03-数据库设计.md) - DB结构
+
+### 📚 完整文档
+- [文档中心](docs/README.md) - 所有文档导航首页
+- [文档导览图](docs/navigation/文档导览图.md) - 文本版导览
+- [可视化图表](docs/navigation/文档导览图-可视化.md) - Mermaid流程图
+
+---
+
+## 📌 重要提示
+
+✅ **推荐的部署方案**: 
+- Linux本地部署 (性能最优，脚本完整) → [查看](docs/deployment/Linux本地部署指南.md)
+- Docker部署作为参考 → [查看](docs/deployment/部署文档.md)
+
+📖 **不知道从哪开始?**
+- 快速开始: [QUICK_START.md](QUICK_START.md)
+- 完整导航: [docs/README.md](docs/README.md)
+- 文档导览: [docs/navigation/文档导览图.md](docs/navigation/文档导览图.md)
+
+🔄 **所有文档已整理**
+- 根目录: 项目首页和快速开始
+- `docs/`: 所有详细文档按分类
+
+---
+
+## 🎯 核心功能
+
+| 服务 | 端口 | 功能 | 状态 |
+|------|------|------|------|
+| 认证服务 | 8081 | 用户登注认证 | ✅ |
+| 系统管理 | 8082 | 用户角色管理 | ✅ |
+| 应用服务 | 8083 | AI应用模板 | ✅ |
+| 内容服务 | 8084 | 文章思维管理 | ✅ |
+| 支付服务 | 8085 | 订单积分 | ✅ |
+| 营销服务 | 8087 | 推荐邀请 | ✅ |
+| 前端 | 80 | Web用户界面 | ✅ |
+
+---
+
+## 📞 获取帮助
+
+- 📖 **查看文档**: [docs/README.md](docs/README.md)
+- 🤔 **查找教程**: [文档导览图](docs/navigation/文档导览图.md)
+- 🐛 **部署问题**: [部署检查清单](docs/guides/DEPLOYMENT_CHECKLIST.md)
+- ⚙️ **配置问题**: [配置参考手册](docs/deployment/配置参考手册.md)
+
+---
+
+## 📚 更多信息
+
+- **项目版本**: v2.0
+- **最后更新**: 2026-02-17
+- **文档位置**: [docs/](docs/)
+- **快速开始**: [QUICK_START.md](QUICK_START.md)
+
+---
+
+**立即开始**➜ [快速开始指南](QUICK_START.md) ⏱️ 只需5分钟!

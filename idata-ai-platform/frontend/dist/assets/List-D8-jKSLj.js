@@ -1,0 +1,1 @@
+/* empty css             *//* empty css                 */import{_ as s,o as a,c as t,a as n,b as e,a0 as o}from"./index-CDSZG5ub.js";const r={class:"instances-container"};const c=s({},[["render",function(s,c){const i=o;return a(),t("div",r,[c[0]||(c[0]=n("h2",null,"我的作品",-1)),e(i,{description:"暂无作品"})])}],["__scopeId","data-v-307387b1"]]);export{c as default};

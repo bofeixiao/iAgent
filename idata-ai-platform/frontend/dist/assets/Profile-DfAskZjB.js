@@ -1,0 +1,1 @@
+/* empty css             *//* empty css                 */import{_ as s,o as a,c as o,a as t,b as e,a0 as n}from"./index-CDSZG5ub.js";const r={class:"profile-container"};const c=s({},[["render",function(s,c){const i=n;return a(),o("div",r,[c[0]||(c[0]=t("h2",null,"个人中心",-1)),e(i,{description:"功能开发中"})])}],["__scopeId","data-v-b76c7720"]]);export{c as default};

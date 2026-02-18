@@ -1,0 +1,1 @@
+/* empty css             *//* empty css                 */import{_ as s,o as a,c as t,a as n,b as e,a0 as o}from"./index-CDSZG5ub.js";const i={class:"thinking-container"};const r=s({},[["render",function(s,r){const c=o;return a(),t("div",i,[r[0]||(r[0]=n("h2",null,"思维分析",-1)),e(c,{description:"功能开发中"})])}],["__scopeId","data-v-1056c8e9"]]);export{r as default};

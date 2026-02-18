@@ -42,7 +42,7 @@ request.interceptors.response.use(
     return res
   },
   (error) => {
-    console.error('请求错误:', error)
+    // console.error('请求错误:', error)
     ElMessage.error(error.message || '网络错误')
     return Promise.reject(error)
   }

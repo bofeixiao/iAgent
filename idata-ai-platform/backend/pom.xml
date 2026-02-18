@@ -15,11 +15,13 @@
 
     <modules>
         <module>idata-common</module>
+        <!-- <module>idata-gateway</module> -->
         <module>idata-auth</module>
         <module>idata-system</module>
         <module>idata-app</module>
         <module>idata-content</module>
         <module>idata-payment</module>
+        <!-- <module>idata-ai</module> -->
         <module>idata-marketing</module>
     </modules>
 
@@ -35,7 +37,7 @@
         
         <!-- Database -->
         <mybatis-plus.version>3.5.5</mybatis-plus.version>
-        <mysql.version>8.4.0</mysql.version>
+        <mysql.version>8.0.33</mysql.version>
         <druid.version>1.2.21</druid.version>
         
         <!-- Security -->

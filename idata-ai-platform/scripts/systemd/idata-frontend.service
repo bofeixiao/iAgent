@@ -1,0 +1,21 @@
+[Unit]
+Description=iData AI Platform Frontend (Nginx)
+After=network.target
+Wants=network.target
+
+[Service]
+Type=forking
+User=root
+Group=root
+
+ExecStart=/usr/sbin/nginx
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+
+PrivateTmp=true
+
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

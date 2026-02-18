@@ -1,0 +1,1 @@
+/* empty css             *//* empty css                 */import{_ as s,o as a,c as t,a as e,b as o,a0 as n}from"./index-CDSZG5ub.js";const r={class:"articles-container"};const c=s({},[["render",function(s,c){const i=n;return a(),t("div",r,[c[0]||(c[0]=e("h2",null,"精华内容",-1)),o(i,{description:"暂无文章"})])}],["__scopeId","data-v-f187fc1b"]]);export{c as default};

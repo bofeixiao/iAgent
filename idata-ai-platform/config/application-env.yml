@@ -1,0 +1,34 @@
+# 环境变量配置参考
+# 说明: 可以通过环境变量覆盖配置文件中的值
+
+# 使用方法:
+# export SPRING_DATASOURCE_URL=jdbc:mysql://...
+# export SPRING_DATASOURCE_USERNAME=idata
+# export SPRING_DATASOURCE_PASSWORD=your-password
+# java -jar idata-auth-1.0.0.jar
+
+# 常用环境变量对应表:
+
+spring:
+  datasource:
+    url:        # 对应: SPRING_DATASOURCE_URL
+    username:   # 对应: SPRING_DATASOURCE_USERNAME
+    password:   # 对应: SPRING_DATASOURCE_PASSWORD
+
+  redis:
+    host:       # 对应: SPRING_REDIS_HOST
+    port:       # 对应: SPRING_REDIS_PORT
+    password:   # 对应: SPRING_REDIS_PASSWORD
+
+  rabbitmq:
+    host:       # 对应: SPRING_RABBITMQ_HOST
+    port:       # 对应: SPRING_RABBITMQ_PORT
+    username:   # 对应: SPRING_RABBITMQ_USERNAME
+    password:   # 对应: SPRING_RABBITMQ_PASSWORD
+
+server:
+  port:         # 对应: SERVER_PORT
+
+jwt:
+  secret:       # 对应: JWT_SECRET
+  expiration:   # 对应: JWT_EXPIRATION
