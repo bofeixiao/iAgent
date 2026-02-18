@@ -60,3 +60,27 @@ logs/
 
 # Application
 application-local.yml
+
+# 编译输出
+/bin/
+/obj/
+/Release/
+/Debug/
+/x64/
+/x86/
+
+# 打包文件
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.exe
+*.dll
+*.pdb
+*.jar
+
+# VS 临时文件
+*.user
+*.suo
+*.vs/
+.vs/
