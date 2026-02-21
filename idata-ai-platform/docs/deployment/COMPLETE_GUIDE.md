@@ -136,6 +136,7 @@ sudo rabbitmq-plugins enable rabbitmq_management
 # 创建用户
 sudo rabbitmqctl add_user idata Idata@123456
 sudo rabbitmqctl set_permissions -p "/" idata ".*" ".*" ".*"
+sudo rabbitmqctl set_user_tags idata administrator
 
 # 验证
 # 访问: http://localhost:15672

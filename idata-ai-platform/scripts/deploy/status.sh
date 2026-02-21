@@ -69,7 +69,7 @@ else
 fi
 
 # RabbitMQ
-if curl -s -u idata:Idata@123456 http://localhost:15672/api/aliveness-test 2>/dev/null | grep -q "ok"; then
+if curl -s -u idata:Idata@123456 http://localhost:15672/api/aliveness-test/%2F 2>/dev/null | grep -q "ok"; then
     echo "✅ RabbitMQ 正常"
 else
     echo "❌ RabbitMQ 异常"
