@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import com.idataai.common.security.util.SecurityUtil;
 import org.apache.ibatis.reflection.MetaObject;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,6 +18,7 @@ import java.time.LocalDateTime;
  * @author iDataAI
  */
 @Configuration
+@MapperScan("com.idataai.system.mapper")
 public class MyBatisPlusConfig {
 
     /**
